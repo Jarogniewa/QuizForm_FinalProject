@@ -6,16 +6,17 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+
 @Entity
-@Table(name = "QUIZ")
+@Table(name = "POLL")
 @Data
 @NoArgsConstructor
-public class Quiz {
+public class Poll {
 
     @Id
     @GeneratedValue
-    @Column(name = "QUIZ_ID")
-    public String quizId;
+    @Column(name = "POLL_ID")
+    public Long pollId;
 
     @Column
     public String title;
@@ -24,18 +25,14 @@ public class Quiz {
     public String description;
 
     @Column
-    public String question;
+    public String questions;
 
     @Column
-    public Long answersIds;
-
-    @Column
-    public Long trueAnswerId;
+    public String answers;
 
     @Column
     public LocalDateTime creationDate;
 
     @Column
     public String link;
-
 }

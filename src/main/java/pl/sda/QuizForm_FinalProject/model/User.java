@@ -6,19 +6,23 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "USER_ANSWER")
+@Table(name = "USER")
 @Data
 @NoArgsConstructor
-public class UserAnswer {
+public class User {
 
     @Id
     @GeneratedValue
-    @Column
-    public Long userAnswerId;
+    @Column(name = "USER_ID")
+    public Long userId;
 
     @Column
-    public Long questionId;
+    public String name;
 
     @Column
-    public Long answerId;
+    public int gainedScore;
+
+    @Column
+    public int maximumScore;
+
 }

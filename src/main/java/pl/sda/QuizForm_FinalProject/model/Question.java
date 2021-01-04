@@ -7,10 +7,10 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "QUIZ_QUEST")
+@Table(name = "QUESTION")
 @Data
 @NoArgsConstructor
-public class QuizQuestion {
+public class Question {
 
     @Id
     @GeneratedValue
@@ -18,16 +18,19 @@ public class QuizQuestion {
     private Long id;
 
     @Column
+    public QuestionType questionType;
+
+    @Column
     public String content;
 
     @Column
-    public int points;
+    public int scorePoints;
 
     @OneToMany
     @JoinTable(
             name = "answers",
-            joinColumns =  { @JoinColumn(name = "QUESTION_ID")}
+            joinColumns =  @JoinColumn(name = "QUESTION_ID")
     )
-    private List<QuizAnswer> answers;
+    private List<Answer> answers;
 
 }

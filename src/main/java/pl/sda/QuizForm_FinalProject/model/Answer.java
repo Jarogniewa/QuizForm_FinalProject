@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table(name = "QUIZ_ANS")
 @Data
 @NoArgsConstructor
-public class QuizAnswer {
+public class Answer {
 
     @Id
     @GeneratedValue
@@ -23,6 +23,6 @@ public class QuizAnswer {
     public String content;
 
     @Column
-    public boolean correctness;
+    public AnswerCorrectness correctness;
 
 }
