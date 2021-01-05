@@ -13,11 +13,12 @@ import java.util.List;
 public class Question {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "QUESTION_ID")
     private Long id;
 
     @Column
+    @Enumerated(EnumType.STRING)
     public QuestionType questionType;
 
     @Column
@@ -27,10 +28,7 @@ public class Question {
     public int scorePoints;
 
     @OneToMany
-    @JoinTable(
-            name = "answers",
-            joinColumns =  @JoinColumn(name = "QUESTION_ID")
-    )
+    @JoinColumn(name = "QUESTION_ID")
     private List<Answer> answers;
 
 }

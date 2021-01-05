@@ -12,9 +12,12 @@ import javax.persistence.*;
 public class UserAnswer {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     public Long userAnswerId;
+
+    @Column
+    public Long userId;
 
     @Column
     public Long questionId;

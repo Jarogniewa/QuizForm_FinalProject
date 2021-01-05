@@ -12,12 +12,21 @@ import javax.persistence.*;
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "USER_ID")
     public Long userId;
 
     @Column
-    public String name;
+    public String firstName;
+
+    @Column
+    public String lastName;
+
+    @Column
+    public String email;
+
+    @Column
+    public Long takenQuizId;
 
     @Column
     public int gainedScore;

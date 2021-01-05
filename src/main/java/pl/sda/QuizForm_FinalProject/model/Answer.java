@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class Answer {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ANSWER_ID")
     public Long answerId;
 
@@ -23,6 +23,7 @@ public class Answer {
     public String content;
 
     @Column
+    @Enumerated(EnumType.STRING)
     public AnswerCorrectness correctness;
 
 }

@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 public class Poll {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "POLL_ID")
     public Long pollId;
 
@@ -31,6 +31,7 @@ public class Poll {
     public String answers;
 
     @Column
+    @Temporal(TemporalType.DATE)
     public LocalDateTime creationDate;
 
     @Column
