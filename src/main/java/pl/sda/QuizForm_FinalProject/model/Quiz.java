@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -29,7 +29,11 @@ public class Quiz {
     @Column
     public String description;
 
-    @OneToMany(mappedBy = "QUIZ_ID")
+    @OneToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "questions",
+            joinColumns = { @JoinColumn( name = "QUIZ_ID") }
+    )
     public List<Question> questions;
 
 //    @Column
@@ -40,7 +44,7 @@ public class Quiz {
 
     @Column
     @Temporal(TemporalType.DATE)
-    public LocalDateTime creationDate;
+    public Date creationDate;
 
     @Column
     public String link;

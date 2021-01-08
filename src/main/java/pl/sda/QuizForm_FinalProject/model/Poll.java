@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 
@@ -26,7 +26,11 @@ public class Poll {
     @Column
     public String description;
 
-    @OneToMany(mappedBy = "POLL_ID")
+    @OneToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "questions",
+            joinColumns = { @JoinColumn( name = "POLL_ID") }
+            )
     public List<Question> questions;
 
 //    @Column
@@ -34,7 +38,7 @@ public class Poll {
 
     @Column
     @Temporal(TemporalType.DATE)
-    public LocalDateTime creationDate;
+    public Date creationDate;
 
     @Column
     public String link;

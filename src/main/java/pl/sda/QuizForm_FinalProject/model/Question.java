@@ -21,6 +21,12 @@ public class Question {
     @Enumerated(EnumType.STRING)
     public QuestionType questionType;
 
+    @Column(name = "POLL_ID")
+    public Long PollId;
+
+    @Column(name = "QUIZ_ID")
+    public Long QuizId;
+
     @Column
     public String content;
 
