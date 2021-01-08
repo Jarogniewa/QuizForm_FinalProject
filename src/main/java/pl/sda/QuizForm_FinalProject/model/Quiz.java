@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "QUIZ")
@@ -23,14 +24,14 @@ public class Quiz {
     @Column
     public String description;
 
-    @Column
-    public String question;
+    @OneToMany(mappedBy = "QUIZ_ID")
+    public List<Question> questions;
 
-    @Column
-    public Long answersIds;
-
-    @Column
-    public Long trueAnswerId;
+//    @Column
+//    public Long answersIds;
+//
+//    @Column
+//    public Long trueAnswerId;
 
     @Column
     @Temporal(TemporalType.DATE)

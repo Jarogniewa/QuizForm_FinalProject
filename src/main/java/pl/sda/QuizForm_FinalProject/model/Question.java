@@ -27,8 +27,7 @@ public class Question {
     @Column
     public int scorePoints;
 
-    @OneToMany
-    @JoinColumn(name = "QUESTION_ID")
+    @OneToMany(mappedBy = "QUESTION_ID")
     private List<Answer> answers;
 
 }
