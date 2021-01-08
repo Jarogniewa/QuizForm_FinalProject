@@ -7,8 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan("pl.sda")
-@EntityScan("pl.sda.final_project.model")
+@ComponentScan("pl.sda.QuizForm_FinalProject")
+@EntityScan("pl.sda.QuizForm_FinalProject.model")
 @EnableJpaRepositories("pl.sda.QuizForm_FinalProject.repository")
 //@Import(SecurityConfig.class)
 public class QuizFormFinalProjectApplication {

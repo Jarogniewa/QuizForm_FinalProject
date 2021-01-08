@@ -1,18 +1,16 @@
 package pl.sda.QuizForm_FinalProject.DB_Initialization;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
-import pl.sda.QuizForm_FinalProject.model.Question;
 import pl.sda.QuizForm_FinalProject.model.Quiz;
 import pl.sda.QuizForm_FinalProject.repository.QuizRepository;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Random;
 
 @Configuration
-public class FillQuizDB implements CommandLineRunner {
+public class FillQuizDB
+        implements CommandLineRunner
+{
 
     private QuizRepository quizRepository;
 

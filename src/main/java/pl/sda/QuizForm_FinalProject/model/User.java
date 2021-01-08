@@ -9,6 +9,7 @@ import javax.persistence.*;
 @Table(name = "USER")
 @Data
 @NoArgsConstructor
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class User {
 
     @Id

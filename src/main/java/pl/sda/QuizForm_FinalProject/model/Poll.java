@@ -12,6 +12,7 @@ import java.util.List;
 @Table(name = "POLL")
 @Data
 @NoArgsConstructor
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Poll {
 
     @Id
