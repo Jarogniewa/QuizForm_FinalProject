@@ -28,8 +28,8 @@ public class Poll {
     @OneToMany(mappedBy = "POLL_ID")
     public List<Question> questions;
 
-    @Column
-    public String answers;
+//    @Column
+//    public String answers;
 
     @Column
     @Temporal(TemporalType.DATE)
