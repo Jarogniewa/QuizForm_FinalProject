@@ -1,5 +1,7 @@
 package pl.sda.QuizForm_FinalProject.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +12,8 @@ import java.util.List;
 @Entity
 @Table(name = "QUIZ")
 @Data
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 public class Quiz {
 
