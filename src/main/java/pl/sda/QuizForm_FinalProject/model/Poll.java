@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 
 @Entity
@@ -24,8 +25,8 @@ public class Poll {
     @Column
     public String description;
 
-    @Column
-    public String questions;
+    @OneToMany(mappedBy = "POLL_ID")
+    public List<Question> questions;
 
     @Column
     public String answers;
