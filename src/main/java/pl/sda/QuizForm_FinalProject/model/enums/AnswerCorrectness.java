@@ -1,4 +1,4 @@
-package pl.sda.QuizForm_FinalProject.model;
+package pl.sda.QuizForm_FinalProject.model.enums;
 
 public enum AnswerCorrectness {
 

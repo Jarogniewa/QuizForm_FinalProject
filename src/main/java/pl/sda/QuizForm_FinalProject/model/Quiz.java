@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -34,6 +33,8 @@ public class Quiz {
     @JoinTable(
             name = "QUESTION",
             joinColumns = { @JoinColumn( name = "QUIZ_ID") }
+//            ,
+//            inverseJoinColumns = { @JoinColumn(name = "QUESTION_ID") }
     )
     public List<Question> questions;
 

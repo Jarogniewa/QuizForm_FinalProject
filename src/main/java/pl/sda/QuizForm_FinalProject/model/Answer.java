@@ -2,6 +2,7 @@ package pl.sda.QuizForm_FinalProject.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import pl.sda.QuizForm_FinalProject.model.enums.AnswerCorrectness;
 
 import javax.persistence.*;
 
