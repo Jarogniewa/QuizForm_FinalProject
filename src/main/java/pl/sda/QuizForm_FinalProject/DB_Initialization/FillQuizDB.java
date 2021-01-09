@@ -21,6 +21,7 @@ public class FillQuizDB
     public void run(String... args) throws Exception{
         quizRepository.save(Quiz.builder()
                 .quizId(1L)
+                .creationDate(LocalDateTime.now())
                 .title("Test quiz 1")
                 .description("This is description of Test quiz 1")
                 .link("12345678")

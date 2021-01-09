@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -42,9 +43,9 @@ public class Quiz {
 //    @Column
 //    public Long trueAnswerId;
 
-    @Column
-    @Temporal(TemporalType.DATE)
-    public Date creationDate;
+    @Column(columnDefinition = "TIMESTAMP")
+    //@Temporal(TemporalType.TIME)
+    public LocalDateTime creationDate;
 
     @Column
     public String link;

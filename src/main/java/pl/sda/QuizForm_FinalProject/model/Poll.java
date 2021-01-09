@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -36,9 +37,9 @@ public class Poll {
 //    @Column
 //    public String answers;
 
-    @Column
-    @Temporal(TemporalType.DATE)
-    public Date creationDate;
+    @Column(columnDefinition = "TIMESTAMP")
+    //@Temporal(TemporalType.DATE)
+    public LocalDateTime creationDate;
 
     @Column
     public String link;
