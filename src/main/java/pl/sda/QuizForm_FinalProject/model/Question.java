@@ -41,4 +41,10 @@ public class Question {
     )
     private List<Answer> answers;
 
+//    @ManyToOne(cascade = { CascadeType.ALL}))
+//    @JoinTable(
+//            name = "QUIZ",
+//            joinColumns = { @JoinColumn ( name = "QUESTION_ID") }
+//    )
+
 }
