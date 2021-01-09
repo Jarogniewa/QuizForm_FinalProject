@@ -14,20 +14,6 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping(path = "/create-poll")
-    public String createPoll(Model model)
-    {
-        model.addAttribute("poll", new PollDto());
-        return "create-poll";
-    }
-
-    @GetMapping(path = "/create-quiz")
-    public String createQuiz(Model model)
-    {
-        model.addAttribute("quiz", new QuizDto());
-        return "create-quiz";
-    }
-
     @GetMapping(path = "/poll")
     public String poll(Model model)
     {

@@ -15,19 +15,19 @@ import pl.sda.QuizForm_FinalProject.service.QuizService;
 @RequiredArgsConstructor
 public class QuizController {
 
-//    private final QuizService quizService;
-//
-//    @GetMapping("/create-quiz")
-//    public String createQuiz(Model model)
-//    {
-//        model.addAttribute("quiz", new QuizDto());
-//        return "create-quiz";
-//    }
-//
-//    @PostMapping("/create-quiz")
-//    public String saveQuiz(@ModelAttribute("quiz") QuizDto quiz)
-//    {
-//        quizService.save(quiz);
-//        return "redirect:/index";
-//    }
+    private final QuizService quizService;
+
+    @GetMapping("/create-quiz")
+    public String createQuiz(Model model)
+    {
+        model.addAttribute("quiz", new QuizDto());
+        return "create-quiz";
+    }
+
+    @PostMapping("/create-quiz")
+    public String saveQuiz(@ModelAttribute("quiz") QuizDto quiz)
+    {
+        quizService.save(quiz);
+        return "redirect:/index";
+    }
 }
