@@ -26,6 +26,14 @@ public class FillQuizDB
                 .description("This is description of Test quiz 1")
                 .link("12345678")
                 .build());
+
+        quizRepository.save(Quiz.builder()
+                .quizId(2L)
+                .creationDate(LocalDateTime.now())
+                .title("Test quiz 2")
+                .description("This is description of Test quiz 2")
+                .link("90123456")
+                .build());
     }
 
 }
