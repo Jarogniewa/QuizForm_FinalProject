@@ -33,7 +33,11 @@ public class Question {
     @Column
     public int scorePoints;
 
-    @OneToMany(mappedBy = "QUESTION_ID")
+    @OneToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "ANSWER",
+            joinColumns = { @JoinColumn( name = "QUESTION_ID") }
+    )
     private List<Answer> answers;
 
 }

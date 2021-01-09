@@ -13,20 +13,20 @@ import pl.sda.QuizForm_FinalProject.service.PollService;
 @RequiredArgsConstructor
 public class PollController {
 
-    private final PollService pollService;
-
-    @GetMapping("/create-poll")
-    public String createPoll(Model model)
-    {
-        model.addAttribute("poll", new PollDto());
-        return "create-poll";
-    }
-
-    @PostMapping("/create-poll")
-    public String savePoll(@ModelAttribute("poll") PollDto poll)
-    {
-        pollService.save(poll);
-        return "redirect:/index";
-    }
+//    private final PollService pollService;
+//
+//    @GetMapping("/create-poll")
+//    public String createPoll(Model model)
+//    {
+//        model.addAttribute("poll", new PollDto());
+//        return "create-poll";
+//    }
+//
+//    @PostMapping("/create-poll")
+//    public String savePoll(@ModelAttribute("poll") PollDto poll)
+//    {
+//        pollService.save(poll);
+//        return "redirect:/index";
+//    }
 
 }

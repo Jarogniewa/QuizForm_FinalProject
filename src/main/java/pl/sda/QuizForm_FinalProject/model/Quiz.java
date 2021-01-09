@@ -31,7 +31,7 @@ public class Quiz {
 
     @OneToMany(cascade = { CascadeType.ALL })
     @JoinTable(
-            name = "questions",
+            name = "QUESTION",
             joinColumns = { @JoinColumn( name = "QUIZ_ID") }
     )
     public List<Question> questions;

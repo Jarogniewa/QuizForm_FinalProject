@@ -28,7 +28,7 @@ public class Poll {
 
     @OneToMany(cascade = { CascadeType.ALL })
     @JoinTable(
-            name = "questions",
+            name = "QUESTION",
             joinColumns = { @JoinColumn( name = "POLL_ID") }
             )
     public List<Question> questions;
